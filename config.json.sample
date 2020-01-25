@@ -1,0 +1,22 @@
+{
+  "push": {
+    "user": "xxx",
+    "token": "xxx",
+  },
+  "auth": {
+    "admin": {
+      "password": "1234",
+      "admin": true,
+      "accounts": [ "testaccount@example.com" ]
+    }
+  },
+
+  "mc": [
+    {
+      "username": "testaccount@example.com",
+      "name": "test123",
+      "password": "abcd123",
+      "keepConnected": true
+    }
+  ]
+}
