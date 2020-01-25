@@ -1,0 +1,27 @@
+{
+  "name": "quicksilver",
+  "version": "1.0.0",
+  "description": "2b2t Minecraft Proxy",
+  "main": "index.js",
+  "dependencies": {
+    "clear-module": "^4.0.0",
+    "dateformat": "^3.0.3",
+    "import-fresh": "^3.1.0",
+    "minecraft-protocol": "^1.9.4",
+    "pushover-notifications": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SamMauldin/QuickSilver.git"
+  },
+  "author": "Sam Mauldin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SamMauldin/QuickSilver/issues"
+  },
+  "homepage": "https://github.com/SamMauldin/QuickSilver#readme"
+}
