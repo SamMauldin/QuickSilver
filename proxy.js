@@ -6,7 +6,7 @@ const importFresh = require("import-fresh");
 const eidMap = importFresh("./modules/eidMap");
 const chunkStorage = importFresh("./modules/chunkStorage");
 const playerList = importFresh("./modules/playerList");
-const antiAFK = importFresh("./modules/antiAFK");
+// const antiAFK = importFresh("./modules/antiAFK");
 
 const Push = require("pushover-notifications");
 
@@ -60,7 +60,7 @@ const keepConnectedInterval = setInterval(function() {
     if (acct.keepConnected && !connections[acct.username]) {
 
       connect(acct.username);
-      connections[acct.username].enableAntiAFK = true;
+      // connections[acct.username].enableAntiAFK = true;
       done = true;
 
     }
@@ -150,7 +150,7 @@ function setupListeners(account) {
   conn.gameData.chunkStorage = conn.gameData.chunkStorage || chunkStorage(conn);
   conn.gameData.playerList = conn.gameData.playerList || playerList(conn);
   
-  if (!conn.gameData.antiAFK) { conn.gameData.antiAFK = true; antiAFK(conn); }
+  // if (!conn.gameData.antiAFK) { conn.gameData.antiAFK = true; antiAFK(conn); }
 
   addListener(account, "end", function() {
     if (state.attached[account]) {
@@ -488,7 +488,7 @@ server.on("login", function(pClient) {
                   }
                 }
 
-                status += conn.enableAntiAFK ? "*" : "";
+                // status += conn.enableAntiAFK ? "*" : "";
               }
               
               sendChatMessage(pClient, `[${id}] ${account} - ${status}`, color);
@@ -579,6 +579,7 @@ server.on("login", function(pClient) {
             return;
           }
 
+          /* 
           if (cmd[0] == "afk") {
             if (attached) {
               connections[attached].enableAntiAFK = true;
@@ -590,6 +591,7 @@ server.on("login", function(pClient) {
 
             return;
           }
+          */
 
           // Admin Commands
 
